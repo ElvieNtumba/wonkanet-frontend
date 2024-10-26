@@ -11,9 +11,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - name: Install dependencies
+      run: npm install
     - name: Clear npm cache
       run: npm cache clean --force
-
+    - name: Build project
+      run: npm run build
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@master
       with:
