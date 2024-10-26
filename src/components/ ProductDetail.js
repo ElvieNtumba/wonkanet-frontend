@@ -11,7 +11,7 @@ const ProductDetailPage = () => {
     name: `Product ${id}`,
     description: `Description for Product ${id}`,
     price: (10 + parseInt(id, 10)) * 5, // Example pricing logic
-    image: `img${id}.jpg`, // Assuming the image name corresponds with the ID
+    image: `img${id}.jpg`, 
   };
 
   return (
